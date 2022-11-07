@@ -1,28 +1,50 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheDocuments />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+
+import TheDocuments from '@/components/TheDocuments.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    TheDocuments,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+@import 'normalize.css';
+
+@font-face {
+  font-family: FiraSans;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('FiraSans'),
+    local('FiraSans-Regular'),
+    url('@/assets/fonts/fira-sans/400.woff')
+    format('woff');
 }
+
+@font-face {
+  font-family: FiraSans;
+  font-style: normal;
+  font-weight: 500;
+  src:
+    local('FiraSans Medium'),
+    local('FiraSans-Medium'),
+    url('@/assets/fonts/fira-sans/500.woff')
+    format('woff');
+}
+
+#app {
+  font-family: FiraSans, sans-serif;
+  padding: 40px 30px;
+}
+
 </style>
